@@ -1,0 +1,100 @@
+/* elements */
+.container{
+	height: 1250px 100%;
+	width: 950px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	overflow: hidden;
+	z-index: -1;
+}
+#stars{
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+	animation: stars 2s linear;
+}
+#red{
+	z-index: 2;
+	position: absolute;
+	height: 100%;
+	animation: cover 5s linear;
+}
+#shroom{
+	z-index: 1;
+	position: absolute;
+	height: 100%;
+	animation: mushroom 3s infinite linear;
+}
+.title{
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 150px;
+	letter-spacing: .125px;
+	color: white;
+	width: 700px;
+	height: 170px;
+	overflow:hidden;
+	white-space: nowrap;
+	z-index: 4;
+	margin-left: 3.1em;
+	margin-top: 1.5em;
+	position: absolute;
+	opacity: 0;
+	animation: seconds 5s steps(10) forwards;
+	animation-delay: 5s;
+}
+.author{
+	font-family: 'Arima Madurai', cursive; 
+	z-index: 3;
+	letter-spacing: -3px;
+	font-size: 55px;
+	color: #1a428a;
+	opacity: 0;
+	margin-left: 8.75em;
+	margin-top: 2.5em;
+	position: absolute;
+	animation: text 3s forwards linear;
+	animation-delay: 10s;
+}
+.subhead{
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 30px;
+	letter-spacing: .125px;
+	color: white;
+	opacity: 0;
+	z-index: 4;
+	margin-left: 24.5em;
+	margin-top: 12.5em;
+	position: absolute;
+	animation: text 3s forwards linear;
+	animation-delay: 10s;
+}
+.subhead:hover{
+	color: #8c3c67;
+	text-shadow: 2px 2px white;
+}
+
+/* animation keyframes */
+
+@keyframes mushroom{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+@keyframes cover{
+	0%{top: 800px;}
+	100%{top: 0px;}
+}
+@keyframes seconds{
+	0%{width: 0px; opacity: 1}
+	100%{width: 700px; opacity: 1}
+}
+@keyframes text{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes stars{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
